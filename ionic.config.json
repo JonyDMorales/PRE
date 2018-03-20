@@ -1,0 +1,8 @@
+{
+  "name": "PRE",
+  "app_id": "75a57b07",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
