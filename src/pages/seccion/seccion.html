@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title> {{ estado }}, distrito {{ distrito }} </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-title> Selecciona tu sección: </ion-title>
+    <div *ngFor="let seccion of secciones" padding-top>
+        <ion-list-header (click)="goPage(seccion)">
+            {{ seccion }}
+        </ion-list-header>
+    </div>
+</ion-content>

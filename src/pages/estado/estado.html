@@ -1,0 +1,18 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+        <ion-title>Estados</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-title>Selecciona tu estado:</ion-title>
+
+    <div *ngFor="let estado of estados" padding-top>
+        <ion-list-header (click)="goPage(estado)">
+            {{ estado }}
+        </ion-list-header>
+    </div>
+</ion-content>
