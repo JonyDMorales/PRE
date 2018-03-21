@@ -1,10 +1,33 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="dark">
         <ion-title>Información</ion-title>
     </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-
+    <ion-title>{{ nombre }}</ion-title>
+    <ion-card padding>
+        <p> Encargado de la sección: {{ seccion }} </p>
+        <ion-card-content>
+            <ion-list inset>
+                <p ion-item> Estado: {{ estado }} </p>
+                <p ion-item> Distrito: {{ distrito }} </p>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <form (ngSubmit)="enviar()">
+        <ion-title padding>Por favor, llena todos los campos: </ion-title>
+        <ion-list padding>
+            <ion-item>
+                <ion-label floating>Padrón Electoral</ion-label>
+                <ion-input type="number" [(ngModel)]="padron" name="padron"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Votos</ion-label>
+                <ion-input type="number" [(ngModel)]="votos" name="votos"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button color="dark" type="submit" block> enviar </button>
+    </form>
 </ion-content>
